@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  position: absolute;
+}
+
+.st-sticker-input {
+  background-color: transparent;
+  border: none;
+  width: calc(100% - 20px);
+  height: calc(100% - 2rem);
+  overflow-wrap: break-word;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  marker-end: none;
+
+  position: fixed;
+  left: 0;
+  top: 2rem;
+  margin: 0 10px 0 10px;
+}
+
+.st-sticker-input::selection {
+  color: black;
+  background-color: #fd7e14;
+}
+
+.st-sticker-delete-button {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: #FCFCFC;
+}

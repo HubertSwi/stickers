@@ -1,0 +1,4 @@
+<app-tool-bar></app-tool-bar>
+<app-loading-spinner *ngIf="stickersLoading"></app-loading-spinner>
+<app-sticker-table [ngStyle]="{'visibility': (!stickersLoading && !errorStickersLoading)? 'visible' : 'hidden'}"></app-sticker-table>
+<app-stickers-error *ngIf="errorStickersLoading"></app-stickers-error>

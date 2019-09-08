@@ -1,0 +1,108 @@
+<div class="st-pos-0 st-size-full st-gradient-bg">
+  <div class="st-register-form-pos">
+    <div class="col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3 offset-1 offset-sm-4 offset-md-6 offset-lg-7 offset-xl-8">
+      <div style="width: 100%; text-align: center">
+        <label style="display: inline-block" class="st-label-1">Register!</label>
+      </div>
+      <form (ngSubmit)="onRegister(f)" #f="ngForm">
+
+        <div class="form-group">
+          <label for="reg_first_name">First name</label>
+          <input class="st-border-1 form-control"
+                 type="text"
+                 id="reg_first_name"
+                 name="reg_first_name"
+                 ngModel
+                 required
+                 pattern="[a-zA-Z]+"
+                 #reg_first_name="ngModel">
+          <span class="st-label-3"
+                *ngIf="!reg_first_name.valid && reg_first_name.touched">
+            Please enter your first name!
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="reg_last_name">Last name</label>
+          <input class="st-border-1 form-control"
+                 type="text"
+                 id="reg_last_name"
+                 name="reg_last_name"
+                 ngModel
+                 required
+                 pattern="[a-zA-Z]+"
+                 #reg_last_name="ngModel">
+          <span class="st-label-3"
+                *ngIf="!reg_last_name.valid && reg_last_name.touched">
+            Please enter your last name!
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="reg_email">Mail</label>
+          <input class="st-border-1 form-control"
+                 type="email"
+                 id="reg_email"
+                 name="reg_email"
+                 ngModel
+                 required
+                 email
+                 #reg_email="ngModel">
+          <span class="st-label-3"
+                *ngIf="!reg_email.valid && reg_email.touched">
+            Please enter valid a email!
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="reg_password">Password</label>
+          <input class="st-border-1 form-control"
+                 type="password"
+                 id="reg_password"
+                 name="reg_password"
+                 ngModel
+                 required
+                 pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                 #reg_password="ngModel">
+          <span class="st-label-3"
+                *ngIf="!reg_password.valid && reg_password.touched">
+            A password must be at least 6 char long and contain at least one letter and one number!
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="reg_rep_password">Repeat password</label>
+          <input class="st-border-1 form-control"
+                 type="password"
+                 id="reg_rep_password"
+                 name="reg_rep_password"
+                 ngModel
+                 required
+                 #reg_rep_password="ngModel">
+          <span class="st-label-3"
+                *ngIf="reg_password.value != reg_rep_password.value && reg_rep_password.touched">
+            A repeated password is not the same as first one!
+          </span>
+          <p class="st-label-2"
+                routerLink="/login">
+            or login if you have an account
+          </p>
+        </div>
+
+        <button class="st-border-1 btn"
+                type="submit"
+                [disabled]="!f.valid || reg_password.value != reg_rep_password.value">
+          Register
+        </button>
+      </form>
+      <label *ngIf="passRepNotMatch" class="st-label-3">The entered passwords are not identical</label>
+      <label *ngIf="wrongFirebaseEmailAuth" class="st-label-3">Mail verification failed. Please another email!</label>
+    </div>
+  </div>
+
+  <div class="st-pos-0 st-size-full st-gradient-bg-semitransparent" *ngIf="isRegistrationStarted">
+    <div class="loader"></div>
+  </div>
+
+</div>
+

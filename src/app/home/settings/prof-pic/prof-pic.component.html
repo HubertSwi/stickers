@@ -1,0 +1,21 @@
+<div id="avatar-img-container">
+  <div *ngIf="isLoadingAvatar" class="lds-dual-ring"></div>
+  <img *ngIf="!isLoadingAvatar && imageChangedEvent == ''"
+       id="avatar-img"
+       [src]="avatarImg"
+       default = "../../../../assets/default-avatar.png">
+  <image-cropper
+    *ngIf="!isLoadingAvatar && imageChangedEvent != ''"
+    id="avatar-img-preview"
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="1 / 1"
+    [resizeToWidth]="256"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+  ></image-cropper>
+</div>
+<div style="margin-top: 1rem">
+  <input type="file" id="avatarInput" (change)="onUploadAvatarImg($event)" accept=".png, .jpg" style="display: none">
+  <input type="button" value="Edit avatar" onclick="document.getElementById('avatarInput').click()" />
+</div>

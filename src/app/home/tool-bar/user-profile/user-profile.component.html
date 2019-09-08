@@ -1,0 +1,10 @@
+<img class="st-avatar dropdown-toggle"
+     [src]="avatarImg"
+     default = "../../../../assets/default-avatar.png"
+     id="user-avatar"
+     [ngStyle]="{'visibility': isImgLoaded ? 'visible' : 'hidden'}">
+<ul class="dropdown-menu st-pos-1 st-user-menu" *ngIf="isUserMenuShown">
+  <li routerLink="/settings" class="st-user-menu-btn">Settings</li>
+  <hr style="margin-top: 0.5rem; margin-bottom: 0.5rem">
+  <li (click)="onClickLogout()" class="st-user-menu-btn">Logout</li>
+</ul>

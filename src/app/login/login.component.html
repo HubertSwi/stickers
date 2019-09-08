@@ -1,0 +1,53 @@
+<div class="st-pos-0 st-size-full st-gradient-bg">
+  <div class="st-login-form-pos">
+    <div class="col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3 offset-1 offset-sm-4 offset-md-6 offset-lg-7 offset-xl-8">
+      <div style="width: 100%; text-align: center">
+        <label style="display: inline-block" class="st-label-1">Login!</label>
+      </div>
+      <form (ngSubmit)="onLogin(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="login_email">Mail</label>
+          <input class="st-border-1 form-control"
+                 type="email"
+                 id="login_email"
+                 name="login_email"
+                 ngModel
+                 required
+                 email
+                 #login_email="ngModel">
+          <span class="st-label-3"
+                *ngIf="!login_email.valid && login_email.touched">
+            Please enter valid a email!
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="login_password">Password</label>
+          <input class="st-border-1 form-control"
+                 type="password"
+                 id="login_password"
+                 name="login_password"
+                 ngModel
+                 required
+                 pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                 #login_password="ngModel">
+          <span class="st-label-3"
+                *ngIf="!login_password.valid && login_password.touched">
+            A password must be at least 6 char long and contain at least one letter and one number!
+          </span>
+          <p class="st-label-2"
+             routerLink="/register">
+            or register if you don't have an account
+          </p>
+        </div>
+        <button class="st-border-1 btn"
+                type="submit"
+                [disabled]="!f.valid">
+          Login
+        </button>
+      </form>
+      <span class="st-label-3" *ngIf="wrongCredentials">
+        Wrong login or password!
+      </span>
+    </div>
+  </div>
+</div>

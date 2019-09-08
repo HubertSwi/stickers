@@ -1,0 +1,14 @@
+.st-error-container {
+  position: absolute;
+  top: 40vh;
+  left: calc(50vw - var(--toolbar-size));
+  text-align: center;
+}
+
+.st-error-img {
+  height: 10vh;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

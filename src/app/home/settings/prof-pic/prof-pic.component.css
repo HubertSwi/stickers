@@ -1,0 +1,44 @@
+#avatar-img {
+  width: 100%;
+  height: 100%;
+}
+
+#avatar-img-preview {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+#avatar-img-container {
+  width: 13rem;
+  height: 13rem;
+  border: black solid 1px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  margin-left: 25%;
+  margin-top: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 5px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.8s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

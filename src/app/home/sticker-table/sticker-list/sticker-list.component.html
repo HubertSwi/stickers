@@ -1,0 +1,15 @@
+<div appMovableArea
+     class="st-movable-area st-pos-0 st-size-pos-1">
+  <app-sticker
+    *ngFor="let stickerElement of stickerList"
+    [stickerItem]="stickerElement"
+    appMovable
+    [style.top.px]="stickerElement.ycord"
+    [style.left.px]="stickerElement.xcord"
+    [style.z-index]="stickerElement.zcord"
+    class="st-sticker-size st-sticker-borders st-sticker-color"
+    (saveStickerOnPointerUpEmitter)="updateStickerListElement($event)"
+    (saveStickerOnPointerDownEmitter)="updateStickersZIndex($event)"
+    [attr.id]="stickerElement.id"
+    (deleteStickerEmitter)="deleteSticker($event)"></app-sticker>
+</div>

@@ -1,0 +1,51 @@
+.st-wrapper {
+  text-align: left;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(1rem, auto);
+  width: 100%;
+}
+
+.st-settings-1-col {
+  grid-column: 1;
+}
+
+.st-settings-2-col {
+  grid-column: 2 / 4;
+}
+
+.st-settings-3-col {
+  grid-column: 4;
+  text-align: center;
+}
+
+.st-settings-4-col {
+  grid-column: 5;
+  text-align: center;
+}
+
+.st-sett-btn {
+  color: blue;
+  cursor: pointer;
+}
+
+.st-sett-btn:hover {
+  text-decoration: underline;
+}
+
+input {
+  height: 1.4rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.st-date-wrapper {
+  text-align: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(1rem, auto);
+  width: 100%;
+}

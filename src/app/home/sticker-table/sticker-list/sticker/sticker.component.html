@@ -1,0 +1,8 @@
+<button type="button" class="st-sticker-delete-button" (click)="onDeleteSticker()">X</button>
+<textarea class="st-sticker-input"
+          name="stickerText"
+          id="stickerText"
+          [(ngModel)] = "stickerItem.text"
+          (ngModelChange)="saveInputChanges.next($event)"
+          maxlength="200"
+></textarea>

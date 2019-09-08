@@ -1,0 +1,26 @@
+.st-avatar {
+  margin-left: 10%;
+  width: 80%;
+  left: 10%;
+  border-radius: 50%;
+}
+
+.st-user-menu {
+  width: fit-content;
+  display: block;
+}
+
+.st-user-menu-btn {
+  color: black;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+
+.st-user-menu-btn:hover {
+  color: white;
+  background-color: #1040DD;
+}
+
+#user-avatar:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+.st-movable-area {
+  display: block;
+}
+
+.st-sticker-size {
+  height: 300px;
+  width: 200px;
+}
+
+.st-sticker-borders {
+  border: 1px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 2px;
+}
+
+.st-sticker-color {
+  background-color: #fdce24;
+}
+
+.st-dragging {
+  background-color: #ddbe04;
+  user-select: none;
+}

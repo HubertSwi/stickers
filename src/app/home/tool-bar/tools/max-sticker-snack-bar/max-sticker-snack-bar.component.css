@@ -1,0 +1,18 @@
+.st-max-sticker-alert {
+  background-color: grey;
+  border: black 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  display: inline-block;
+  padding: 1rem;
+  left: var(--toolbar-size);
+  top: calc(0.5 * var(--toolbar-size));
+  position: absolute;
+}
+
+.st-max-sticker-alert-text {
+  margin: 0;
+}

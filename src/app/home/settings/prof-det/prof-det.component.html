@@ -1,0 +1,46 @@
+<div>
+  <h3 style="text-align: left">User settings</h3>
+  <hr>
+
+  <div class="st-wrapper">
+
+    <div class="st-settings-1-col">First name</div>
+    <div *ngIf="!fNameMod" class="st-settings-2-col">{{user.firstName}}</div>
+    <div *ngIf="fNameMod" class="st-settings-2-col">
+      <input [ngStyle]="{'border-color': wrongFnameFlag ? 'red' : 'initial'}" type="text" [value]="user.firstName" #firstNameElem>
+    </div>
+    <div *ngIf="!fNameMod" class="st-settings-3-col st-sett-btn" (click)="editFnameOnClick()">Edit</div>
+    <div *ngIf="fNameMod" class="st-settings-3-col st-sett-btn" (click)="saveFnameOnClick()">Save</div>
+    <div [ngStyle]="{'visibility': fNameMod ? 'visible' : 'hidden'}" class="st-settings-4-col st-sett-btn" (click)="cancelFnameOnClick()">Cancel</div>
+
+    <div class="st-settings-1-col">Last name</div>
+    <div *ngIf="!lNameMod" class="st-settings-2-col">{{user.lastName}}</div>
+    <div *ngIf="lNameMod" class="st-settings-2-col">
+      <input [ngStyle]="{'border-color': wrongLnameFlag ? 'red' : 'initial'}" type="text" [value]="user.lastName" #lastNameElem>
+    </div>
+    <div *ngIf="!lNameMod"class="st-settings-3-col st-sett-btn" (click)="editLnameOnClick()">Edit</div>
+    <div *ngIf="lNameMod"class="st-settings-3-col st-sett-btn" (click)="saveLnameOnClick()">Save</div>
+    <div [ngStyle]="{'visibility': lNameMod ? 'visible' : 'hidden'}" class="st-settings-4-col st-sett-btn" (click)="cancelLnameOnClick()">Cancel</div>
+
+    <div class="st-settings-1-col">Birth Date</div>
+    <div *ngIf="!bdMod" class="st-settings-2-col">{{user.birthDate | date:'yyyy-MM-dd'}}</div>
+    <div *ngIf="bdMod" class="st-date-wrapper st-settings-2-col">
+      <input [ngStyle]="{'border-color': wrongYearFlag ? 'red' : 'initial'}" type="number" [value]="getBdYear()" #bdYearElem>
+      <input [ngStyle]="{'border-color': wrongMonthFlag ? 'red' : 'initial'}" type="number" [value]="getBdMonth()" #bdMonthElem>
+      <input [ngStyle]="{'border-color': wrongDayFlag ? 'red' : 'initial'}" type="number" [value]="getBdDay()" #bdDayElem>
+    </div>
+    <div *ngIf="!bdMod" class="st-settings-3-col st-sett-btn" (click)="editBdOnClick()">Edit</div>
+    <div *ngIf="bdMod" class="st-settings-3-col st-sett-btn" (click)="saveBdOnClick()">Save</div>
+    <div [ngStyle]="{'visibility': bdMod ? 'visible' : 'hidden'}" class="st-settings-4-col st-sett-btn" (click)="cancelBdOnClick()">Cancel</div>
+
+    <div class="st-settings-1-col">email</div>
+    <div *ngIf="!emailMod" class="st-settings-2-col">{{user.email}}</div>
+    <div *ngIf="emailMod" class="st-settings-2-col">
+      <input [ngStyle]="{'border-color': wrongEmailFlag ? 'red' : 'initial'}" type="text" [value]="user.email" #emailElem>
+    </div>
+    <div *ngIf="!emailMod" class="st-settings-3-col st-sett-btn" (click)="editEmailOnClick()" >Edit</div>
+    <div *ngIf="emailMod" class="st-settings-3-col st-sett-btn" (click)="saveEmailOnClick()" >Save</div>
+    <div [ngStyle]="{'visibility': emailMod ? 'visible' : 'hidden'}" class="st-settings-4-col st-sett-btn" (click)="cancelEmailOnClick()">Cancel</div>
+
+  </div>
+</div>

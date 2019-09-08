@@ -1,0 +1,48 @@
+.st-toolbar-size {
+  height: 100vh;
+  width: var(--toolbar-size);
+
+}
+
+#main-icon {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  padding: 0 1rem 0 1rem;
+  width: var(--toolbar-size);
+  height: calc(var(--toolbar-size) /2);;
+
+  outline-style: none;
+}
+
+#main-icon:hover {
+  cursor: pointer;
+}
+
+.st-bar-hr-1 {
+  position: absolute;
+  top: calc(1rem + (0.5 * var(--toolbar-size)));
+  left: 0;
+  border-color: white;
+  width: var(--toolbar-size);
+}
+
+.st-user-avatar-pos {
+  position: absolute;
+  top: calc(3rem + (0.5 * var(--toolbar-size)));
+  left: 0;
+}
+
+.st-bar-hr-2 {
+  position: absolute;
+  top: calc(3rem + (1.3 *(var(--toolbar-size))));
+  left: 0;
+  border-color: white;
+  width: var(--toolbar-size);
+}
+
+.st-app-tools-pos {
+  position: absolute;
+  top: calc(4rem + (1.3 *(var(--toolbar-size))));
+  left: 0;
+}

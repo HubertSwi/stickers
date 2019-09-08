@@ -1,0 +1,57 @@
+:root {
+  overflow-y: hidden;
+}
+
+#st-settings-main-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  min-width: 50rem;
+  text-align: center;
+}
+
+#st-settings-aggr-container {
+  position: relative;
+  width: 50rem;
+  height: 18rem;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  background-color: white;
+}
+
+#setting-details-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35rem;
+  height: 11rem;
+  display: inline-block;
+  padding: 1rem;
+}
+
+#avatar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 18rem;
+  display: inline-block;
+  padding: 1rem;
+}
+
+#st-buttons-container {
+  display: inline-block;
+  position: relative;
+  width: 50rem;
+  height: 2rem;
+  padding: 0;
+  min-width: 50rem;
+  text-align: right;
+}
+
+.st-settings-control-btn {
+  margin-right: 1rem;
+}

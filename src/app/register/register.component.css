@@ -1,0 +1,9 @@
+.st-register-form-pos {
+  margin-top: 8vh;
+}
+
+.st-gradient-bg-semitransparent {
+  opacity: 0.5;
+  /*background-image: linear-gradient(to bottom right, #ACACAC, #FCFCFC);*/
+  background-color: black;
+}

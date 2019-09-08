@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(1, calc(var(--toolbar-size)));
+  grid-template-rows: repeat(2, var(--toolbar-btn-height));
+  grid-gap: 0;
+}
+
+.st-plus-btn {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.st-add-btn {
+  position: center;
+  background: transparent url(../../../../assets/plus-ico.svg) no-repeat center;
+  height: 100%;
+  width: 100%;
+}
+
+.st-add-btn:hover {
+  background-color: #1040DD;
+}
